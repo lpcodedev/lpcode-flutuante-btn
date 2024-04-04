@@ -204,7 +204,7 @@
 
     function numeroHTML(){ ?>
         <input type="text" name="lpw_numero" id="lpw_numero" value="<?php echo esc_attr(get_option('lpw_numero')); ?>" placeholder="55 19 980808080" pattern="[0-9]{0~20}">
-        <label for="lpw_numero">O telefone precisa conter o código do país.</label>
+        <label for="lpw_numero">O telefone precisa conter o <b>código do país e o DDD</b>.</label>
     <?php
     }
 
@@ -215,29 +215,29 @@
 
     function localHTML(){ ?>
         <select name="lpw_local">
-            <option value="0" <?php selected(get_option('lpe_local'), '0'); ?> >Direita</option>
-            <option value="1" <?php selected(get_option('lpe_local'), '1'); ?> >Esquerda</option>
+            <option value="0" <?php selected(get_option('lpw_local'), '0'); ?> >Direita</option>
+            <option value="1" <?php selected(get_option('lpw_local'), '1'); ?> >Esquerda</option>
         </select>
     <?php
     }
 
     function animacaoHTML(){ ?>
         <select name="lpw_animate">
-            <option value="0" <?php selected(get_option('lpe_animate'), '0'); ?> >Nenhuma</option>
-            <option value="1" <?php selected(get_option('lpe_animate'), '1'); ?> >Jump</option>
-            <option value="2" <?php selected(get_option('lpe_animate'), '2'); ?> >Zoom</option>
+            <option value="0" <?php selected(get_option('lpw_animate'), '0'); ?> >Nenhuma</option>
+            <option value="1" <?php selected(get_option('lpw_animate'), '1'); ?> >Jump</option>
+            <option value="2" <?php selected(get_option('lpw_animate'), '2'); ?> >Zoom</option>
         </select>
     <?php
     }
 
     function iconHTML(){ ?>
         <select name="lpw_icon">
-            <option value="0" <?php selected(get_option('lpe_icon'), '0'); ?> >Style 1</option>
-            <option value="1" <?php selected(get_option('lpe_icon'), '1'); ?> >Style 2</option>
-            <option value="2" <?php selected(get_option('lpe_icon'), '2'); ?> >Style 3</option>
-            <option value="3" <?php selected(get_option('lpe_icon'), '3'); ?> >Style 4</option>
-            <option value="4" <?php selected(get_option('lpe_icon'), '4'); ?> >Style 5</option>
-            <option value="5" <?php selected(get_option('lpe_icon'), '5'); ?> >Style 6</option>
+            <option value="0" <?php selected(get_option('lpw_icon'), '0'); ?> >Style 1</option>
+            <option value="1" <?php selected(get_option('lpw_icon'), '1'); ?> >Style 2</option>
+            <option value="2" <?php selected(get_option('lpw_icon'), '2'); ?> >Style 3</option>
+            <option value="3" <?php selected(get_option('lpw_icon'), '3'); ?> >Style 4</option>
+            <option value="4" <?php selected(get_option('lpw_icon'), '4'); ?> >Style 5</option>
+            <option value="5" <?php selected(get_option('lpw_icon'), '5'); ?> >Style 6</option>
         </select>
     <?php
     }
@@ -263,7 +263,6 @@
         ?>
         <div class="wrap">
             <h1>WhatsApp Button</h1>
-            <p>O número precisa conter o código do País e o DDD.</p>
             <form action="options.php" method="post">
                 <?php
                     settings_fields('lpWhatsappButton');
