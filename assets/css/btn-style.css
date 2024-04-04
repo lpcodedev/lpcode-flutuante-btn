@@ -1,0 +1,35 @@
+.whats-btn{
+    position: fixed;
+    bottom: 10px;
+    z-index: 9999;
+}
+
+.whats-btn.right{
+    right: 20px;
+}
+
+.whats-btn.left{
+    left: 20px;
+}
+
+.whats-btn.animate-jump{
+    animation: lp-jump 2s infinite;
+}
+
+.whats-btn.animate-zoom{
+    animation: lp-zoom 2s infinite;
+}
+
+.whats-btn a img{
+    width: var(--button-size);
+}
+
+@keyframes lp-jump {
+    0%,100%{bottom: 10px;}
+    50%{bottom: 20px;}
+}
+
+@keyframes lp-zoom {
+    0%,100%{transform: scale(0.9);}
+    50%{transform: scale(1.1);}
+}
