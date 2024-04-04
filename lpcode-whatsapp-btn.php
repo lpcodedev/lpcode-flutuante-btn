@@ -1,7 +1,7 @@
 <?php
 
 /**
- * Plugin Name: Botão do WhatsApp - LPCode
+ * Plugin Name: LPCode WhatsApp BTN
  * Plugin URI: https://github.com/lpcodedev/lpcode-whatsapp-btn
  * Description: This is a plugin to facilitate the installation of a floating button that will direct users to WhatsApp.
  * Version: 1.0
