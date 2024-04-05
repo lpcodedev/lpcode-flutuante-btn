@@ -1,8 +1,8 @@
 <?php
 
 /**
- * Plugin Name: LPCode WhatsApp BTN
- * Plugin URI: https://github.com/lpcodedev/lpcode-whatsapp-btn
+ * Plugin Name: LPCode Flutuante BTN
+ * Plugin URI: https://github.com/lpcodedev/lpcode-flutuante-btn
  * Description: This is a plugin to facilitate the installation of a floating button that will direct users to WhatsApp.
  * Version: 1.0
  * Requires at least: 5.2
@@ -11,7 +11,7 @@
  * Author URI: https://lpcode.com.br
  * License: GPL v2 or later
  * License URI: https://www.gnu.org/licenses/gpl-2.0.html
- * Text Domain: lpcode-whatsapp-button
+ * Text Domain: lpcode-flutuante-btn 
  * Domain Path: /language
  */
 
@@ -30,7 +30,7 @@
     }
 
     function lpwMainLink(){
-        wp_enqueue_style('LPCode-whatsapp-btn-style', LPW_URL.'assets/css/btn-style.css',false,'1.0','all');
+        wp_enqueue_style('LPCode-flutuante-btn-style', LPW_URL.'assets/css/btn-style.css',false,'1.0','all');
     }
 
     // Chama a função para imprimir o botão na tela
