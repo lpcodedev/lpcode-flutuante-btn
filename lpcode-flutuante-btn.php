@@ -30,7 +30,7 @@
     }
 
     function lpwMainLink(){
-        wp_enqueue_style('LPCode-flutuante-btn-style', LPW_URL.'assets/css/btn-style.css',false,'1.0','all');
+            wp_enqueue_style('LPCode-flutuante-btn-style', LPW_URL.'assets/css/btn-style.css',false,'1.0','all');
     }
 
     // Chama a função para imprimir o botão na tela

@@ -1,9 +1,11 @@
 === LPCode Flutuante BTN ===
 Contributors: Thiago
+Tags: Button, botão flutuante, lpcode, CTA, chamada para ação, call to action
 Version: 1.0
 Requires at least: 5.2.0
 Tested uo to: 6.5
 Requires PHP: 7.4
+Stable tag: 5.5.6
 License: GPL v2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
