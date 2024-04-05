@@ -1,5 +1,11 @@
-=== Log Deprecated Notices ===
+=== LPCode Flutuante BTN ===
 Contributors: Thiago
+Version: 1.0
+Requires at least: 5.2.0
+Tested uo to: 6.5
+Requires PHP: 7.4
+License: GPL v2 or later
+License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
 == Description ==
 
@@ -23,5 +29,6 @@ I will prioritize these tasks based on feedback, so let me know what you'd like 
 
 == Upgrade Notice ==
 
-= 1.0 =
-Initial compatibility for WordPress 5.4
+= 1.0 [4th April 2024] =
+
+* Initial compatibility for WordPress 5.4
