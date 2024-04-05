@@ -4,7 +4,7 @@
  * Plugin Name: LPCode Flutuante BTN
  * Plugin URI: https://github.com/lpcodedev/lpcode-flutuante-btn
  * Description: This is a plugin to facilitate the installation of a floating button that will direct users to WhatsApp.
- * Version: 1.0
+ * Version: 1.1
  * Requires at least: 5.2
  * Requires PHP: 7.4
  * Author: lpcode
@@ -45,7 +45,7 @@
     // O botão
     function lpwButtonHtml(){
         echo '
-        <div class="whats-btn '.esc_attr($this->setPosition()).' '. esc_attr($this->setAnimate()).' " style="'. esc_attr($this->setSize()).'">
+        <div class="whats-btn '.esc_attr($this->setPosition()).' '. esc_attr($this->setAnimate()).' " style="'. esc_attr($this->setSize()).' '. esc_attr($this->setBottom()).' '. esc_attr($this->setDistance()).'">
             <a href="'.esc_url($this->makeLink()).'" target="_blank"><img src="'.esc_url($this->setIcon()).'" alt="Link para o WhatsApp"></a>
         </div> 
         ';
@@ -118,12 +118,34 @@
     // Definir o tamanho
     function setSize(){
         if(get_option('lpw_size', '45')){
-            $size = '--button-size: '.esc_attr(get_option('lpw_size')).'px';
+            $size = '--button-size: '.esc_attr(get_option('lpw_size')).'px;';
         }else{
             $size = '--button-size: 45px;';
         }
 
         return $size;
+    }
+
+    // Definir o a distancia do bottom
+    function setBottom(){
+        if(get_option('lpw_bottom', '10')){
+            $bottom = '--button-bottom: '.esc_attr(get_option('lpw_bottom')).'px;';
+        }else{
+            $bottom = '--button-bottom: 10px;';
+        }
+
+        return $bottom;
+    }
+
+    // Definir o a distancia das laterais
+    function setDistance(){
+        if(get_option('lpw_distance', '10')){
+            $distance = '--button-distance: '.esc_attr(get_option('lpw_distance')).'px;';
+        }else{
+            $distance = '--button-distance: 20px;';
+        }
+
+        return $distance;
     }
 
     // Criando o Banco de Dados
@@ -145,6 +167,14 @@
         // Tamanho
         add_settings_field('lpw_size', 'Tamanho do botão (px): ', array($this, 'sizeHTML'), 'lp-wts-link-app', 'lpw_first_section');
         register_setting('lpWhatsappButton', 'lpw_size', array('sanitize_callback' => array($this, 'sanitizeNumero'), 'default' => '45'));
+
+        // Distancia Bottom
+        add_settings_field('lpw_bottom', 'Distancia inferior (px): ', array($this, 'bottomHTML'), 'lp-wts-link-app', 'lpw_first_section');
+        register_setting('lpWhatsappButton', 'lpw_bottom', array('sanitize_callback' => array($this, 'sanitizeNumero'), 'default' => '10'));
+
+        // Distancia laterais
+        add_settings_field('lpw_distance', 'Distancia da lateral (px): ', array($this, 'distanceHTML'), 'lp-wts-link-app', 'lpw_first_section');
+        register_setting('lpWhatsappButton', 'lpw_distance', array('sanitize_callback' => array($this, 'sanitizeNumero'), 'default' => '20'));
 
         // Posição
         add_settings_field('lpw_local', 'Escolha a posição do botão: ', array($this, 'localHTML'), 'lp-wts-link-app', 'lpw_first_section');
@@ -244,6 +274,16 @@
 
     function sizeHTML(){ ?>
         <input type="number" name="lpw_size" value="<?php echo esc_attr(get_option('lpw_size')); ?>" min='10' max='150'>
+    <?php
+    }
+
+    function bottomHTML(){ ?>
+        <input type="number" name="lpw_bottom" value="<?php echo esc_attr(get_option('lpw_bottom')); ?>" min='-150' max='2000'>
+    <?php
+    }
+
+    function distanceHTML(){ ?>
+        <input type="number" name="lpw_distance" value="<?php echo esc_attr(get_option('lpw_distance')); ?>" min='-50' max='2000'>
     <?php
     }
 

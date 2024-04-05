@@ -1,15 +1,15 @@
 .whats-btn{
     position: fixed;
-    bottom: 10px;
+    bottom: var(--button-bottom); /*10px */
     z-index: 9999;
 }
 
 .whats-btn.right{
-    right: 20px;
+    right: var(--button-distance);/*20px */
 }
 
 .whats-btn.left{
-    left: 20px;
+    left: var(--button-distance);/*20px */
 }
 
 .whats-btn.animate-jump{
