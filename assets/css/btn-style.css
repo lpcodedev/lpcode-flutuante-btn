@@ -25,8 +25,8 @@
 }
 
 @keyframes lp-jump {
-    0%,100%{bottom: 10px;}
-    50%{bottom: 20px;}
+    0%,100%{bottom: var(--button-bottom);}
+    50%{bottom: calc(var(--button-bottom) + 10px);}
 }
 
 @keyframes lp-zoom {
