@@ -2,9 +2,9 @@
 Contributors: Thiago
 Tags: Button, botão flutuante, lpcode, CTA, call to action
 Requires at least: 5.2.0
-Tested uo to: 6.5
+Tested up to: 6.5
 Requires PHP: 7.4
-Stable tag: 1.1
+Stable tag: 1.2
 License: GPL v2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -29,6 +29,10 @@ I will prioritize these tasks based on feedback, so let me know what you'd like 
 
 
 == Upgrade Notice ==
+
+= 1.2 [6th May 2024] =
+
+* Function name improvements
 
 = 1.1 [5th April 2024] =
 
